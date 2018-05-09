@@ -21,7 +21,13 @@
       通过id查找元素
       <div id="container"></div>
       */
-      var element1 = document.getElementById('container')
+      var element = document.getElementById('container')
+
+      /*
+      通过类名查找元素
+      <div class="subTitle"></div>
+      */
+      var elements = document.getElementsByClassName('subTitle')
 
       /*
       通过标签名查找元素
@@ -33,13 +39,13 @@
       var elements = document.getElementsByTagName('li')
 
       // 改变元素的内容
-      element1.innerHTML = "new content"
+      element.innerHTML = "new content"
 
       // 改变元素的属性
-      element1.title = "new title"
+      element.title = "new title"
 
       // 改变元素的样式
-      element1.style.background = "green"
+      element.style.background = "green"
     }
     </script>
   </head>
