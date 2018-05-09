@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+      function insertElement() {
+        var superElement = document.getElementById('container')
+
+        var subElement = document.createElement('p')
+        subElement.className = 'paragraph'
+        var textNode = document.createTextNode('Hello JS')
+        subElement.appendChild(textNode)
+
+        superElement.appendChild(subElement)
+      }
+
+      function deleteElement() {
+        var superElement = document.getElementById('container')
+        var elements = document.getElementsByClassName('paragraph')
+
+        if (elements[0]) {
+          superElement.removeChild(elements[0])
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="insertElement()">插入元素</button>
+    <button type="button" onclick="deleteElement()">删除元素</button>
+
+    <div id="container"></div>
+  </body>
+</html>

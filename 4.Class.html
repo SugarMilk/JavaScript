@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function Person(identifier) {
+        this.identifier = identifier
+        this.setName = setName
+        this.description = description
+
+        function setName(name) {
+          this.name = name
+        }
+
+        function description() {
+          console.log(this.identifier + ' - ' + this.name)
+        }
+      }
+
+      var person = new Person('10001')
+      person.setName('tom')
+      person.description()
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
