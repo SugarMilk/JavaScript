@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function description() {
+      var array1 = [1, 2]
+      var array2 = [3, 4]
+
+      // 合并数组成为一个新数组
+      var array3 = array1.concat(array2)
+
+      // 数组转字符串
+      var string = array3.join('`')
+
+      var array4 = [5,2,1,8,6]
+
+      // 数组排序，按照字符编码的顺序进行排序
+      var array5 = array4.sort()
+    }
+
+    // 自定义数组排序规则，直接对原数组修改
+    /*
+    如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，
+    然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：
+      若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+      若 a 等于 b，则返回 0。
+      若 a 大于 b，则返回一个大于 0 的值。
+    */
+
+    function sortNumber(a, b) {
+      return a - b
+    }
+    
+    var array = [10,5,40,25,1000,1]
+    document.write(array.sort(sortNumber))
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

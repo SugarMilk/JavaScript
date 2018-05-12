@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    // 正则表达式
+    var string = "the best things"
+    var match = new RegExp("e")
+
+    // 检索字符串中的指定值, 返回 true或false
+    console.log(match.test(string))
+
+    // 检索字符串中的指定值。返回 被找到的值或null。
+    console.log(match.exec(string))
+
+    console.log('----------------------------')
+
+    var match2 = new RegExp("e","g");
+    do {
+      var result = match2.exec(string)
+
+      if (result) {
+          console.log(result);
+      }
+    } while (result)
+
+    console.log('----------------------------')
+    
+    /*
+    compile() 方法用于改变 RegExp。既可以改变检索模式，也可以添加或删除第二个参数。
+    */
+    var string = "the best things";
+
+    var pattern = new RegExp("e")
+    console.log(pattern.test(string)) // true
+
+    pattern.compile("d")
+    console.log(pattern.test(string)) // false
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

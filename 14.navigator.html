@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+    console.log("appCodeName: " + navigator.appCodeName);
+    console.log("appName: " + navigator.appName);
+    console.log("appVersion: " + navigator.appVersion);
+    console.log("cookieEnabled: " + navigator.cookieEnabled);
+    console.log("platform: " + navigator.platform);
+    console.log("userAgent: " + navigator.userAgent);
+    console.log("systemLanguage: " + navigator.systemLanguage);
+
+    /*
+    appCodeName: Mozilla
+    appName: Netscape
+    appVersion: 5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+    cookieEnabled: true
+    platform: MacIntel
+    userAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+    systemLanguage: undefined
+    */
+
+    /*
+    来自 navigator 对象的信息具有误导性，不应该被用于检测浏览器版本，这是因为：
+      navigator 数据可被浏览器使用者更改
+      浏览器无法报告晚于浏览器发布的新操作系统
+    */
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

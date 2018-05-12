@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    /*
+    href: http://localhost:8888/JavaScript/12.location.html
+    hostname: localhost
+    pathname: /JavaScript/12.location.html
+    port: 8888
+    protocol: http:
+    */
+    console.log("href: " + location.href)
+    console.log("hostname: " + location.hostname)
+    console.log("pathname: " + location.pathname)
+    console.log("port: " + location.port)
+    console.log("protocol: " + location.protocol)
+
+    function showDocument() {
+      location.assign("http://www.baidu.com/")
+    }
+    </script>
+  </head>
+  <body>
+    <h1>在服务器上运行</h1>
+
+    <button type="button" onclick="showDocument()">跳转</button>
+  </body>
+</html>

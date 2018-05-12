@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function showAlert() {
+      alert("非法操作！")
+    }
+    function showConfirm() {
+      console.log(confirm("登录成功！"));
+
+      // WARNING: 如何获取用户是点的“取消”还是“确定”
+    }
+    function showPrompt() {
+      console.log(prompt("文本", "默认值"));
+    }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="showAlert()">警告框</button>
+    <button type="button" onclick="showConfirm()">确认框</button>
+    <button type="button" onclick="showPrompt()">提示框</button>
+  </body>
+</html>

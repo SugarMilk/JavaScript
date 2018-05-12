@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    /*
+    获取当日的日期和时间
+    Fri May 11 2018 09:26:11 GMT+0800 (CST)
+    */
+    var date1 = new Date()
+    console.log(date1)
+
+    /*
+    返回从 1970 年 1 月 1 日至今的毫秒数
+    1526001971953
+    */
+    var timestamp = date1.getTime()
+    console.log(timestamp)
+
+    /*
+    重新设置具体日期
+    Thu Feb 01 2018 09:26:11 GMT+0800 (CST)
+    */
+    date1.setFullYear(2018,1,1)
+    console.log(date1)
+
+    /*
+    将当前日期根据UTC转成字符串
+    Thu, 01 Feb 2018 01:26:11 GMT
+    */
+    console.log(date1.toUTCString())
+
+    var date2 = new Date()
+
+    /*获取星期*/
+    var week = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+    var index = date2.getDay()
+    console.log(week[index])
+
+    function showTime() {
+      var date = new Date()
+      var h = date.getHours()
+      var m = date.getMinutes()
+      var s = date.getSeconds()
+
+      if (m < 10) m = "0" + m
+      if (s < 10) s = "0" + s
+
+      var time = h +":"+ m +":"+ s
+      var element = document.getElementById('container')
+      element.innerHTML = time
+
+      setTimeout("showTime()", 500)
+    }
+
+    </script>
+  </head>
+  <body onload="showTime()">
+    <div id="container"></div>
+  </body>
+</html>
